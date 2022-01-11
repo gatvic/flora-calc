@@ -1,23 +1,42 @@
-from tkinter import *
-from tkinter import messagebox
+import tkinter as tk
+# from tkinter import messagebox
+from tkinter import ttk
 
-window = Tk()
+window = tk.Tk()
 window.title('Калькулятор удобрений')
 window.geometry('400x300+300+250')
 
-frame_top = LabelFrame(text='NPK состав')
-frame_top.pack()
-label_1 = Label(frame_top, width=7, height=4, bg='green', text='N')
-label_1.pack(side=LEFT)
-label_2 = Label(frame_top, width=7, height=4, bg='orange', text='P')
-label_2.pack(side=LEFT)
-label_3 = Label(frame_top, width=7, height=4, bg='red', text='K')
-label_3.pack(side=LEFT)
-label_4 = Label(frame_top, width=7, height=4, bg='grey', text='Ca')
-label_4.pack(side=LEFT)
-label_5 = Label(frame_top, width=7, height=4, bg='purple', text='Mg')
-label_5.pack(side=LEFT)
+n = str(0)
+p = str(0)
+k = str(0)
+ca = str(0)
+mg = str(0)
 
+frame_top = tk.LabelFrame(text='NPK состав')
+
+label_1 = tk.Label(frame_top, width=7, height=4, bg='green', text=f'N = {n}')
+
+label_2 = tk.Label(frame_top, width=7, height=4, bg='orange', text=f'P = {p}')
+
+label_3 = tk.Label(frame_top, width=7, height=4, bg='red', text=f'K = {k}')
+
+label_4 = tk.Label(frame_top, width=7, height=4, bg='grey', text=f'Ca = {ca}')
+
+label_5 = tk.Label(frame_top, width=7, height=4, bg='purple', text=f'Mg = {mg}')
+
+
+culture = ''
+frame_npk = tk.LabelFrame(text=f'NPK формула для культуры {culture}')
+
+label_6 = tk.Label(frame_npk, width=7, height=4, bg='green', text=f'N = {n}')
+
+label_7 = tk.Label(frame_npk, width=7, height=4, bg='orange', text=f'P = {p}')
+
+label_8 = tk.Label(frame_npk, width=7, height=4, bg='red', text=f'K = {k}')
+
+label_9 = tk.Label(frame_npk, width=7, height=4, bg='grey', text=f'Ca = {ca}')
+
+label_10 = tk.Label(frame_npk, width=7, height=4, bg='purple', text=f'Mg = {mg}')
 
 
 window.mainloop()
